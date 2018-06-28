@@ -1,11 +1,11 @@
-const THINGController = require("../controllers/THING.ctrl")
+const ProductController = require("../controllers/main.ctrl")
 
 module.exports = function (app) {
-    app.get('/api/THINGs', THINGController.retrieveAllTHINGs)
-    app.get('/api/THINGs/:id', THINGController.retrieveOneTHING)
-    app.post('/api/THINGs', THINGController.createTHING)
-    app.put('/api/THINGs/:id', THINGController.updateTHING)
-    app.delete('/api/THINGs/:id', THINGController.destroyTHING)
+    app.get('/api/products', ProductController.retrieveAllProducts)
+    app.get('/api/products/:idNum', ProductController.retrieveOneProduct)
+    app.post('/api/products', ProductController.createProduct)
+    app.put('/api/products/:idNum', ProductController.updateProduct)
+    app.delete('/api/products/:idNum', ProductController.destroyProduct)
     // any additional routes and their coincident functions
 }
 

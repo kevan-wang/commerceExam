@@ -1,0 +1,18 @@
+
+button {
+    margin-left: 30px;
+}
+
+.field > * {
+    display: inline;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+input[type="text"]:disabled {
+    background: gray;
+}

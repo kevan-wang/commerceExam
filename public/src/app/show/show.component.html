@@ -1,0 +1,22 @@
+<h3>Product Details</h3>
+
+<p class="error" *ngIf="error">To delete a product, the quantity must be 0.</p>
+
+<div id="info">
+  <div class="oneStat">
+    <h3>Name:</h3>
+    <p>{{currentProduct.name}}</p>
+  </div>
+  <div class="oneStat">
+    <h3>Quantity:</h3>
+    <p>{{currentProduct.qty}}</p>
+  </div>
+  <div class="oneStat">
+    <h3>Price:</h3>
+    <p>${{currentProduct.price}}</p>
+  </div>
+
+  <button [routerLink]="['/products']">Back</button>
+  <button (click)="delete()" *ngIf="!currentProduct.qty">Delete</button>
+  <button disabled *ngIf="currentProduct.qty">Delete</button>
+</div>

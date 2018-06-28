@@ -44,6 +44,9 @@ app.use(express.static(path.join(__dirname, 'public/dist/public')))
 
 const routes = require('./server/config/routes.config.js');
 routes(app);
+app.all("*", (req,res,next) => {
+    res.sendFile(path.resolve("./public/dist/public/index.html"))
+  });
 
 
 
